@@ -1,0 +1,23 @@
+<div>
+    <h3>Edit Hen Store</h3>
+
+    <div style="margin-left: 500px;margin-right: 500px;"> 
+        <form>
+            <div>
+            <label style="display: inline;margin-left: 135px;margin-right: 135px;" for="Hen_num">Hen ID</label> 
+            <input style="display: inline;" id="Hen ID" name="Hen ID" type="number" [(ngModel)]="Hen_id"  />
+        </div>
+        <div>
+            <label style="display: inline;margin-left: 100px;margin-right: 100px;" for="Hen_num">Number of Eggs</label> 
+            <input style="display: inline;" id="Egg_num" name="Egg_num" type="number"  [(ngModel)]="Egg_count" />
+        </div>
+        <div>
+            <label style="display: inline;margin-left: 100px;margin-right: 100px;" for="Hen_num">Hierarchy Level</label> 
+            <input style="display: inline;" id="Hierarch_level" name="Hierarch_level" type="number"  min="1"  max="{{Max_Hierarchy}}"  [(ngModel)]="Hierarchy_level"  />
+        </div>
+        <div id="container">
+            <div style="margin-right: 300px;margin-left: 300px;" class="btn-box"><button  id="button1"  (click)="Edit_Hens()">Edit Hen</button></div>
+            </div>
+          </form>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+
+<div style="margin-top: 50px;margin-bottom: 35px; margin-left: 550px;">
+<label for="Date_price">Choose a Date:</label>
+  <select (change)="onChange_Date()" [(ngModel)]="SelectedDate"  name="Date" id="Date_DD">
+    <option *ngFor="let PList of Pindex_list" value={{PList.date}} >{{PList.date}}</option>
+    
+  </select>
+
+</div>
+
+
+<div *ngFor="let object of Hens_object">
+
+    <h3>
+      <a>
+      Hierarchy Level:  {{ object['hierarchy_level'] }}
+      </a>
+    </h3>
+
+    <p>
+        egg_count: {{ object['egg_count'] }}
+      </p>
+
+      <p>
+        Hen_count : {{ object['hen_count'] }}
+    </p>
+    <p>
+        Per_EggPrice : {{ object['per_EggPrice'] }}
+    </p>
+
+    <B>Hens_ID And Egg Count: </B>
+  <ul padding-left:0px > 
+            <li *ngFor="let dt of object['hens_ID'];let i=index" style="display:inline"> [Hen ID- {{dt}}  ,  Egg Count - {{object['egg_Count_perHen'][i]}}]  </li>
+  </ul>
+    
+  
+  
+    
+  
+  </div>
+  <div id="container">
+    <div style="display:inline;margin-right: 100px;margin-left: 100px;" class="btn-box"><button routerLink="/New_Hierarchy" id="button1">Add New Hens in new Hierarchy</button></div>
+    <div style="display:inline;margin-right: 100px;margin-left: 100px;" class="btn-box"><button routerLink="/Add_Hen"  id="button1">Add New Hens</button></div>
+    <div style="display:inline; margin-right: 100px;margin-left: 100px;" class="btn-box"><button routerLink="/Edit_Hen" id="button2">Edit Hens</button></div>
+    <div style="clear:both;"></div>
+</div>

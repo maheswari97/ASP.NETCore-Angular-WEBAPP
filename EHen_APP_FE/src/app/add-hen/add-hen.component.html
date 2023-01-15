@@ -1,0 +1,19 @@
+<div>
+    <h3>Add Hen</h3>
+
+    <div style="margin-left: 500px;margin-right: 500px;"> 
+        <form>
+            <div>
+            <label style="display: inline;margin-left: 100px;margin-right: 100px;" for="Hen_num">Number of Hens</label> 
+            <input style="display: inline;" id="Hen_count" name="Hen_count" [(ngModel)]="Hen_count"  min="1"  max="10" type="number" />
+        </div>
+        <div>
+            <label style="display: inline;margin-left: 100px;margin-right: 100px;" for="Hen_num">Hierarchy Level</label> 
+            <input style="display: inline;" id="Hierarchy_level" name="Hierarchy_level" [(ngModel)]="Hierarchy_level" min="1"  max="{{Max_Hierarchy}}"  type="number" />
+        </div>
+        <div id="container">
+            <div style="margin-right: 300px;margin-left: 300px;" class="btn-box"><button  id="button1"  (click)="Add_Hens()">Add Hens</button></div>
+            </div>
+          </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div *ngFor="let object of stringObject">
+
+    <h3>
+      <a>
+      Date:  {{ object['date'] }}
+      </a>
+    </h3>
+  
+    <p>
+      Price: {{ object['price'] }}
+    </p>
+  
+    <button type="button" (click)="routrEdit(object['id'],object['date'],object['price'])"  routerLink="/Edit_price_index">
+      Edit
+    </button>
+  
+    
+  
+  </div>
